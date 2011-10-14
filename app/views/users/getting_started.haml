@@ -2,6 +2,154 @@
 -#   licensed under the Affero General Public License version 3 or later.  See
 -#   the COPYRIGHT file.
 
+
+:css
+  section {
+    min-height: 1000px;
+  }
+
+%br
+%br
+%br
+%br
+%br
+
+%section#hello-there
+  .hero-unit
+    %h1{:style => "text-align:center;"}
+      Well, hello there!
+
+    %p{:style => "text-align:center;"}
+      Let's get to know one another.
+
+    %br
+    %br
+
+    %form
+      %fieldset
+        .clearfix
+          %label{:for => 'sup'}
+            Your Name
+
+          .input
+            = text_field_tag :sup, '', :class => "xlarge"
+
+        .clearfix{:style => "text-align:center;"}
+          = link_to 'Continue', "#", :class => "btn large"
+
+
+%section#facebook-connection
+  .hero-unit
+    %h1{:style => "text-align:center;"}
+      Thanks, Daniel!
+
+    %p{:style => "text-align:center;"}
+      It's great to have you.
+
+    %h3
+      Diaspora is a great place to meet new faces, but it's always nice to see familiar ones as well.
+
+    %p
+      If you connect your Facebook account to Diaspora*, you can easily find & invite your friends, as well as cross-post from Diaspora* to Facebook.
+    %p
+      Heck, we can even speed your account setup along and pull back your photo as well!
+
+    %h2
+      Enable cross-posting and friend finding?
+
+    = link_to "No, thanks", "#", :class => "btn"
+    = link_to "Sure!", "#", :class => "btn"
+
+
+%section#post-to-facebook
+  .hero-unit
+    %h1{:style => "text-align:center;"}
+      There you are.
+    %p{:style => "text-align:center;"}
+      (And your friends, too.)
+
+    = owner_image_tag
+
+    %h3
+      It looks like some of your friends are already on Diaspora*.  Yay, friends.
+
+    %h3
+      It also looks like some aren't.  Care to flaunt your fancy new account and post a message to Facebook?
+    %p
+      We'll prepend an invite link that any one of your friends can click to join Diaspora*.  You'll be spreading the love.
+
+
+%section#meet-and-greet
+  .hero-unit
+    %h1{:style => "text-align:center;"}
+      It's Meet & Greet time!
+
+    %p{:style => 'text-align:center;'}
+      Want to be welcomed by the welcoming committee?  No problem.  Lucky for you, they love new faces.
+
+    %p
+      Go ahead, post something nice to them!
+
+    %h3
+      We've got some featured users here.  They're creators of awesome content, and are rotated regularly.  Go ahead, don't be shy, try adding them to an aspect or two.
+
+    %p
+      Go ahead, post something nice to them!
+
+
+
+%section#cubbies
+  .hero-unit
+    %h1{:style => "text-align:center;"}
+      We've got an app just for you.
+
+    %p
+      It's called Cubbi.es, and it's Diaspora*'s first ever application.  Our community adores it, and we think you'll get a kick out of it, too.
+
+    %h4
+      Go ahead, open the app in a new tab, we'll wait here while you set it up.
+
+%section#interesting-interests
+  .hero-unit
+    %h1{:style => "text-align:center;"}
+      You're an interesting individual, with interesting interests.
+
+    %h3
+      Let's make sure you're following what you care about!
+
+    %p
+      Hashtags are fucking bomb.
+
+    %p
+      Go ahead, don't be shy!  Post something that you love, and make sure to #tag it.
+
+
+
+%section#keep-you-in-the-loop
+  .hero-unit
+    %h1{:style => "text-align:center;"}
+      Lets keep you in the loop.
+
+    %h3
+      DiasporaHQ
+
+%section#all-set-up
+  .hero-unit
+    %h1{:style => "text-align:center;"}
+      Fantastic!  You're all set up!
+
+    %h3
+      Go and be merry.  We hope you love the community as much as the communtiy loves you.
+
+    %p
+      Some warm and fuzzy text here
+
+    %h4
+      Oh and one more thing, we've got a killer mobile site.  Diaspora doesn't just stop at the desktop.
+
+    %p
+      Some warm and fuzzy text here and a graphic of the mobile site and desktop site (maybe)
+
 .span-5.leftNavBar
   #home_user_badge
     = owner_image_link
