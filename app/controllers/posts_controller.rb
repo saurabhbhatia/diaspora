@@ -60,6 +60,10 @@ class PostsController < ApplicationController
 
   def index
     default_stream_action(Stream::Public)
+    status_message = Post.find_all_by_type("StatusMessage")
+    respond_to do |format|
+        format.xml{ render :xml => @post.all }
+      end
   end
 
   def set_format_if_malformed_from_status_net

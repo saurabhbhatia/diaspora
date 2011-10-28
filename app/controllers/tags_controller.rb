@@ -22,6 +22,7 @@ class TagsController < ApplicationController
       prep_tags_for_javascript
 
       respond_to do |format|
+      format.xml { render xml: @tags.to_xml }
         format.json{
           render(:json => @tags.to_json, :status => 200)
         }

@@ -7,9 +7,9 @@ class StatusMessagesController < ApplicationController
   
   before_filter :remove_getting_started, :only => [:create]
 
-  respond_to :html
+  respond_to :html, :json , :xml
   respond_to :mobile
-
+  
   # Called when a user clicks "Mention" on a profile page
   # @param person_id [Integer] The id of the person to be mentioned
   def new

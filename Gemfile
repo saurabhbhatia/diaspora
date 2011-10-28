@@ -4,7 +4,7 @@ gem 'rails', '3.0.10'
 
 gem 'bundler', '>= 1.0.0'
 gem 'foreman'
-
+gem 'rabl'
 gem 'thin', '1.2.11', :require => false
 
 # authentication
@@ -53,6 +53,7 @@ gem 'typhoeus'
 
 gem 'json', '1.4.6'
 gem 'vanna', :git => 'git://github.com/MikeSofaer/vanna.git'
+
 
 # localization
 
